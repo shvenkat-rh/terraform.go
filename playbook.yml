@@ -1,0 +1,14 @@
+---
+- name: Use Go-based Terraform project
+  hosts: localhost
+  connection: local
+  # vars:
+  #   ansible_python_interpreter: ~/venvinfo/bin/python
+  tasks:
+    - name: Apply Terraform changes
+      terraform.go.go:
+        action: list
+      register: output
+    - name: Show result
+      debug:
+        var: output.output
