@@ -5,7 +5,7 @@ import ctypes
 # It's good practice to make this configurable or use an absolute path
 # if the module will be used from different locations.
 # For simplicity, we'll keep the hardcoded path from your example.
-SO_FILE_PATH = 'plugins/module_utils/list.so'
+SO_FILE_PATH = 'terraform.go/plugins/module_utils/go_bridge.py'
 
 def call_crud_project():
     """
