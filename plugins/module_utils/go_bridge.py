@@ -1,13 +1,15 @@
 # go_bridge.py
 import ctypes
-
+import os
 # Path to your shared library
 # It's good practice to make this configurable or use an absolute path
 # if the module will be used from different locations.
 # For simplicity, we'll keep the hardcoded path from your example.
 #BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #SO_FILE_PATH = os.path.join(BASE_DIR, 'list.so')
-SO_FILE_PATH= 'plugins/module_utils/list.so'
+#SO_FILE_PATH= 'plugins/module_utils/list.so'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SO_FILE_PATH = os.path.join(BASE_DIR, 'list.so')
 
 def call_crud_project():
     """
