@@ -7,9 +7,8 @@ import os
 # For simplicity, we'll keep the hardcoded path from your example.
 #BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #SO_FILE_PATH = os.path.join(BASE_DIR, 'list.so')
-#SO_FILE_PATH= 'plugins/module_utils/list.so'
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SO_FILE_PATH = os.path.join(BASE_DIR, 'list.so')
+SO_FILE_PATH= ' ansible_collections/terraform/go/plugins/module_utils/list.so'
+
 
 def call_crud_project():
     """
