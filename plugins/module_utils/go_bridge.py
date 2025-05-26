@@ -29,11 +29,19 @@ def call_crud_project():
         result_str = result_ptr.decode('utf-8')
         return result_str
     except OSError as e:
-        print(f"Error loading or calling shared library: {e}")
-        return f"Error loading or calling shared library: {e}"
+        error_msg = f"OSError loading/calling shared library: {e}. Path: {SO_FILE_PATH}"
+        print(error_msg)
+        return error_msg # Return the error
+
+    except AttributeError as e:
+        error_msg = f"AttributeError (Check 'ManageProject' symbol & NULL pointer handling): {e}"
+        print(error_msg)
+        return error_msg # Return the error
+
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        return f"An unexpected error occurred: {e}"
+        error_msg = f"An unexpected error occurred: {e}"
+        print(error_msg)
+        return error_msg # Return the error, NOT None
 
 # You can add a test block to run this directly if needed
 #if __name__ == '__main__':
