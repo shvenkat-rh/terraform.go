@@ -30,7 +30,7 @@ def call_crud_project():
         return result_str
     except OSError as e:
         print(f"Error loading or calling shared library: {e}")
-        return None
+        return f"Error loading or calling shared library: {e}"
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return None
