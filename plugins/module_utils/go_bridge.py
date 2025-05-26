@@ -33,7 +33,7 @@ def call_crud_project():
         return f"Error loading or calling shared library: {e}"
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-        return None
+        return f"An unexpected error occurred: {e}"
 
 # You can add a test block to run this directly if needed
 if __name__ == '__main__':
